@@ -125,64 +125,7 @@ section h2 {
   transform: scale(1.02);
 }
 
-/* Contact Form */
-form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-form input,
-form textarea {
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-form button {
-  background-color: #182848;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-form button:hover {
-  background-color: #4b6cb7;
-}
-
-#contact p {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Footer */
-footer {
-  background: #182848;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  #skills ul {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+/* Contact Info */
 .contact-info {
   text-align: center;
   margin-top: 20px;
@@ -197,39 +140,17 @@ footer {
 .contact-info a:hover {
   text-decoration: underline;
 }
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
 
-  #skills ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  section h2 {
-    font-size: 1.6rem;
-  }
-
-  #home h2 {
-    font-size: 2rem;
-  }
-
-  #home p {
-    font-size: 1rem;
-  }
-
-  .download-btn a {
-    font-size: 1rem;
-    padding: 10px 20px;
-    display: inline-block;
-    width: 90%;
-    text-align: center;
-  }
+/* Footer */
+footer {
+  background: #182848;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
 
+/* Resume Download Button */
 .download-btn {
   margin-top: 30px;
   text-align: center;
@@ -248,7 +169,8 @@ footer {
 .download-btn a:hover {
   background: #2c3e50;
 }
-/* Hamburger menu toggle */
+
+/* Hamburger Menu Icon */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -256,7 +178,7 @@ footer {
   color: white;
 }
 
-/* Mobile Responsive Navigation */
+/* Responsive Styles */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -268,9 +190,9 @@ footer {
   }
 
   nav ul {
+    display: none;
     flex-direction: column;
     width: 100%;
-    display: none;
     background-color: #182848;
     padding: 10px 0;
   }
@@ -305,28 +227,7 @@ footer {
   .download-btn a {
     font-size: 1rem;
     padding: 10px 20px;
-    display: inline-block;
     width: 90%;
     text-align: center;
   }
 }
-
-.download-btn {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.download-btn a {
-  background: #4b6cb7;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.download-btn a:hover {
-  background: #2c3e50;
-}
-
