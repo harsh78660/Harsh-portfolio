@@ -76,31 +76,44 @@
   <section id="resume">
     <h2>My Resume</h2>
     <div class="download-btn">
-      <a href="Harsh_Prajapati_Resume.pdf" download>📄 Download My Resume (PDF)</a>
+      <button id="openResume">📄 View My Resume</button>
     </div>
   </section>
+
+  <!-- Resume Modal -->
+  <div id="resumeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe src="Harsh_Prajapati_Resume.pdf" frameborder="0"></iframe>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Harsh Prajapati. All rights reserved.</p>
   </footer>
 
-  <!-- JS for hamburger toggle -->
+  <!-- JS for menu and modal -->
   <script>
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
+    menuToggle.onclick = () => navLinks.classList.toggle("active");
 
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-
-    // Close menu after clicking link
     document.querySelectorAll("#nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-      });
+      link.onclick = () => navLinks.classList.remove("active");
     });
+
+    const modal = document.getElementById("resumeModal");
+    const btn = document.getElementById("openResume");
+    const close = document.querySelector(".close");
+
+    btn.onclick = () => modal.style.display = "block";
+    close.onclick = () => modal.style.display = "none";
+    window.onclick = e => {
+      if (e.target == modal) modal.style.display = "none";
+    };
   </script>
 
 </body>
 </html>
+
