@@ -49,13 +49,16 @@
   <!-- Projects -->
   <section id="projects">
     <h2>My Projects</h2>
+
     <div class="project">
       <h3>Todo Website</h3>
-      <p>A simple todo list web app built using HTML, CSS, and JavaScript.</p>
+      <p>A simple and effective todo list web app built using HTML, CSS, and JavaScript.</p>
     </div>
+
     <div class="project">
       <h3>Appointment Website</h3>
-      <p>An appointment booking interface where users can manage appointments.</p>
+      <p>An appointment booking interface where users can schedule and manage appointments easily.</p>
+      <a class="project-link" href="https://harsh78660.github.io/Book-Appointment/" target="_blank">🔗 Visit Live</a>
     </div>
   </section>
 
@@ -90,7 +93,7 @@
     <p>&copy; 2025 Harsh Prajapati. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- JS -->
   <script>
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
@@ -98,13 +101,11 @@
     const btn = document.getElementById("openResume");
     const close = document.querySelector(".close");
 
-    // Hamburger toggle
     menuToggle.onclick = () => navLinks.classList.toggle("active");
     document.querySelectorAll("#nav-links a").forEach(link => {
       link.onclick = () => navLinks.classList.remove("active");
     });
 
-    // Resume modal open/close
     btn.onclick = () => {
       modal.style.display = "block";
       document.body.style.overflow = "hidden";
