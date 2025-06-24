@@ -12,10 +12,7 @@
   <header>
     <nav>
       <h1 class="logo">Harsh Prajapati</h1>
-
-      <!-- Hamburger Icon -->
       <div class="menu-toggle" id="menu-toggle">☰</div>
-
       <ul id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -27,19 +24,19 @@
     </nav>
   </header>
 
-  <!-- Home Section -->
+  <!-- Home -->
   <section id="home">
     <h2>Hi, I'm Harsh Prajapati</h2>
     <p>Frontend Developer | HTML, CSS, JavaScript</p>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I am a passionate frontend web developer skilled in HTML, CSS, and JavaScript. I love creating beautiful, responsive, and user-friendly websites. With a sharp eye for detail and a creative mindset, I enjoy turning ideas into live, interactive websites.</p>
+    <p>I am a passionate frontend web developer skilled in HTML, CSS, and JavaScript. I love creating beautiful, responsive, and user-friendly websites.</p>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section id="skills">
     <h2>Skills</h2>
     <ul>
@@ -49,30 +46,30 @@
     </ul>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects">
     <h2>My Projects</h2>
     <div class="project">
       <h3>Todo Website</h3>
-      <p>A simple and effective todo list web app built using HTML, CSS, and JavaScript.</p>
+      <p>A simple todo list web app built using HTML, CSS, and JavaScript.</p>
     </div>
     <div class="project">
       <h3>Appointment Website</h3>
-      <p>An appointment booking interface where users can schedule and manage appointments easily.</p>
+      <p>An appointment booking interface where users can manage appointments.</p>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
     <div class="contact-info">
       <p><strong>Email:</strong> <a href="mailto:prajapatisb78@gmail.com">prajapatisb78@gmail.com</a></p>
       <p><strong>Phone:</strong> <a href="tel:+919328193601">+91-9328193601</a></p>
-      <p>Connect with me on <a href="https://www.linkedin.com/in/prajapati-harsh-126b02293" target="_blank">LinkedIn</a></p>
+      <p>Connect on <a href="https://www.linkedin.com/in/prajapati-harsh-126b02293" target="_blank">LinkedIn</a></p>
     </div>
   </section>
 
-  <!-- Resume Section -->
+  <!-- Resume -->
   <section id="resume">
     <h2>My Resume</h2>
     <div class="download-btn">
@@ -93,26 +90,37 @@
     <p>&copy; 2025 Harsh Prajapati. All rights reserved.</p>
   </footer>
 
-  <!-- JS for menu and modal -->
+  <!-- JavaScript -->
   <script>
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
-    menuToggle.onclick = () => navLinks.classList.toggle("active");
-
-    document.querySelectorAll("#nav-links a").forEach(link => {
-      link.onclick = () => navLinks.classList.remove("active");
-    });
-
     const modal = document.getElementById("resumeModal");
     const btn = document.getElementById("openResume");
     const close = document.querySelector(".close");
 
-    btn.onclick = () => modal.style.display = "block";
-    close.onclick = () => modal.style.display = "none";
+    // Hamburger toggle
+    menuToggle.onclick = () => navLinks.classList.toggle("active");
+    document.querySelectorAll("#nav-links a").forEach(link => {
+      link.onclick = () => navLinks.classList.remove("active");
+    });
+
+    // Resume modal open/close
+    btn.onclick = () => {
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    };
+    close.onclick = () => {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    };
     window.onclick = e => {
-      if (e.target == modal) modal.style.display = "none";
+      if (e.target == modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
     };
   </script>
 
 </body>
 </html>
+
