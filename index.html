@@ -85,7 +85,7 @@
     <p>&copy; 2025 Harsh Prajapati. All rights reserved.</p>
   </footer>
 
-  <!-- JS for menu toggle -->
+  <!-- JS for hamburger toggle -->
   <script>
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
@@ -94,7 +94,7 @@
       navLinks.classList.toggle("active");
     });
 
-    // Optional: Close menu after click
+    // Close menu after clicking link
     document.querySelectorAll("#nav-links a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
