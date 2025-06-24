@@ -150,32 +150,76 @@ footer {
   margin-top: 40px;
 }
 
-/* Resume Download Button */
+/* Resume Button */
 .download-btn {
   margin-top: 30px;
   text-align: center;
 }
 
-.download-btn a {
+.download-btn button {
   background: #4b6cb7;
   color: white;
+  border: none;
   padding: 12px 24px;
+  font-size: 1rem;
   border-radius: 6px;
-  text-decoration: none;
+  cursor: pointer;
   font-weight: bold;
   transition: background 0.3s ease;
 }
 
-.download-btn a:hover {
+.download-btn button:hover {
   background: #2c3e50;
 }
 
-/* Hamburger Menu Icon */
+/* Hamburger Menu */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
   color: white;
+}
+
+/* Modal for Resume */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 80vh;
+  border: none;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #4b6cb7;
 }
 
 /* Responsive Styles */
@@ -224,10 +268,8 @@ footer {
     font-size: 1rem;
   }
 
-  .download-btn a {
-    font-size: 1rem;
-    padding: 10px 20px;
-    width: 90%;
-    text-align: center;
+  .modal-content iframe {
+    height: 70vh;
   }
 }
+
