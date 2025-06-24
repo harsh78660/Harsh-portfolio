@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsh Prajapati | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1 class="logo">Harsh Prajapati</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+         <li><a href="#resume">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Hi, I'm Harsh Prajapati</h2>
+    <p>Frontend Developer | HTML, CSS, JavaScript</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate frontend web developer skilled in HTML, CSS, and JavaScript. I love creating beautiful, responsive, and user-friendly websites. With a sharp eye for detail and a creative mindset, I enjoy turning ideas into live, interactive websites.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Todo Website</h3>
+      <p>A simple and effective todo list web app built using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>Appointment Website</h3>
+      <p>An appointment booking interface where users can schedule and manage appointments easily.</p>
+    </div>
+  </section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Me</h2>
+
+
+  <div class="contact-info">
+    <p><strong>Email:</strong> <a href="mailto:prajapatisb78@gmail.com">prajapatisb78@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+919328193601">+91-9328193601</a></p>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/prajapati-harsh-126b02293" target="_blank">LinkedIn</a></p>
+  </div>
+</section>
+<!-- Resume Download Section -->
+<section id="resume">
+  <h2>My Resume</h2>
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="Harsh_Prajapati_Resume.pdf" download style="
+      background: #4b6cb7;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    ">📄 Download My Resume (PDF)</a>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Harsh Prajapati. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Hide all sections except the clicked one when navigation is used
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        section.style.display = section.id === id ? "block" : "none";
+      });
+    }
+
+    // Add click listener to nav links only
+    document.querySelectorAll("nav a").forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        showSection(targetId);
+      });
+    });
+  </script>
+</body>
+</html>
