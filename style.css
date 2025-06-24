@@ -248,4 +248,21 @@ section h2 {
     height: 70vh;
   }
 }
+/* Project live link button */
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  background: #4b6cb7;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background: #2c3e50;
+}
+
 
